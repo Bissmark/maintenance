@@ -1,0 +1,19 @@
+body {
+    margin-top: 75px;
+}
+
+.clean-time-count {
+    text-align: center;
+}
+
+.na-quote {
+    text-align: center;
+}
+
+.daily-prayer {
+    text-align: center;
+}
+
+li {
+    list-style-type: none;
+}
