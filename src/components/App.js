@@ -11,25 +11,25 @@ import Step10 from './Step-10';
 import GratitudeEntry from './GratitudeEntry';
 
 const App = () => {
-  state = {
-    data: null
-  };
+  // state = {
+  //   data: null
+  // };
 
-  componentDidMount = () => {
-    this.callBackendAPI()
-    .then(res => this.setState({ data: res.express }))
-    .catch(err => console.log(err));
-  }
+  // componentDidMount = () => {
+  //   this.callBackendAPI()
+  //   .then(res => this.setState({ data: res.express }))
+  //   .catch(err => console.log(err));
+  // }
 
-  callBackendAPI = async () => {
-    const response = await fetch('/express_backend');
-    const body = await response.json();
+  // callBackendAPI = async () => {
+  //   const response = await fetch('/express_backend');
+  //   const body = await response.json();
 
-    if (response.status !== 200) {
-      throw Error(body.message)
-    }
-    return body;
-  }
+  //   if (response.status !== 200) {
+  //     throw Error(body.message)
+  //   }
+  //   return body;
+  // }
 
   return (
     <div>
