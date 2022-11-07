@@ -13,7 +13,7 @@ const GratitudeEntry = () => {
       autoComplete="off"
     >
         <TextField id="outlined-basic" label="I am grateful for ..." variant="outlined" />
-        <Button>
+        <Button type='submit'>
             Save    
         </Button>  
     </Box>

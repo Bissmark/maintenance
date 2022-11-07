@@ -1,11 +1,29 @@
-// const express = require('express'); //Line 1
-// const app = express(); //Line 2
-// const port = process.env.PORT || 5000; //Line 3
+const express = require('express');
+const bodyParser = require('body-parser');
+const cors = require('cors');
 
-// // This displays message that the server running and listening to specified port
-// app.listen(port, () => console.log(`Listening on port ${port}`)); //Line 6
+const app = express();
 
-// // create a GET route
-// app.get('/express_backend', (req, res) => { //Line 9
-//   res.send({ express: 'YOUR EXPRESS BACKEND IS CONNECTED TO REACT' }); //Line 10
-// }); //Line 11
+const corsOptions = {
+    origin: "http://localhost:5001"
+};
+
+app.use(cors(corsOptions));
+
+app.use(bodyParser.json());
+
+app.use(bodyParser.urlencoded({ extended: true }));
+
+const db = require('./app/models');
+db.sequelize.sync({ force: true}).then(() => {
+    console.log('Drop and re-sync db.');
+});
+
+app.get('/', (req, res) => {
+  res.json({ message: 'Welcome to NA' });
+})
+
+const PORT = process.env.PORT || 5000;
+app.listen(PORT, () => {
+    console.log(`Server is running on port ${PORT}.`);
+});

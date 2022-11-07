@@ -22,6 +22,7 @@ const CleanTime = () => {
     const handleChange = (newValue) => {
         setValue(newValue);
     }
+    console.log(value);
 
     return (
         <LocalizationProvider dateAdapter={AdapterDayjs}>
