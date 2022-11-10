@@ -10,28 +10,9 @@ import Prayers from './Prayers';
 import Step10 from './Step-10';
 import GratitudeEntry from './GratitudeEntry';
 import Journal from './Journal';
+import { useState } from 'react';
 
 const App = () => {
-  // state = {
-  //   data: null
-  // };
-
-  // componentDidMount = () => {
-  //   this.callBackendAPI()
-  //   .then(res => this.setState({ data: res.express }))
-  //   .catch(err => console.log(err));
-  // }
-
-  // callBackendAPI = async () => {
-  //   const response = await fetch('/express_backend');
-  //   const body = await response.json();
-
-  //   if (response.status !== 200) {
-  //     throw Error(body.message)
-  //   }
-  //   return body;
-  // }
-
   return (
     <div>
       <Navbar />
