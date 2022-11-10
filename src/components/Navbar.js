@@ -58,9 +58,14 @@ const Navbar = () => {
             <MenuItem to="/gratitude" component={RouterLink} onClick={handleClose} disableRipple>
               Gratitude List
             </MenuItem>
+            <Divider sx={{ my: 0.5 }} />
             <MenuItem to="/step-10" component={RouterLink} onClick={handleClose} disableRipple>
               Step 10 Questions
             </MenuItem>
+            <MenuItem to="/journal" component={RouterLink} onClick={handleClose} disableRipple>
+              Journal
+            </MenuItem>
+            <Divider sx={{ my: 0.5 }} />
             <MenuItem to="/meetings" component={RouterLink} onClick={handleClose} disableRipple>
               Meetings
             </MenuItem>
